@@ -18,6 +18,7 @@
   "homepage": "https://github.com/andrewzey/2014-06-databases",
   "dependencies": {
     "chai": "^1.9.1",
-    "mocha": "^1.20.1"
+    "mocha": "^1.20.1",
+    "mysql": "^2.3.2"
   }
 }

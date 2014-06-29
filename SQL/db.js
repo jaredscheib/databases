@@ -8,14 +8,21 @@ var mysql = require('mysql');
 var dbConnection = mysql.createConnection({
   user: "root",
   password: "",
-  database: "chat"
+  database: "CHAT"
 });
 
 dbConnection.connect();
+console.log('Woohoo! We connected to the mySQL server');
 /* Now you can make queries to the Mysql database using the
  * dbConnection.query() method.
  * See https://github.com/felixge/node-mysql for more details about
  * using this module.*/
 
+exports.addUser = function(username, callback){
+  console.log('TRYING TO ADD USER');
 
+};
 
+exports.addMessage = function(content, timestamp, U_ID, callback){
+
+};

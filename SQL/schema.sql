@@ -1,6 +1,6 @@
 CREATE DATABASE CHAT;
 
-USE chat;
+USE CHAT;
 
 /*
  CREATE <TABLE>

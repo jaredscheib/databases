@@ -20,9 +20,17 @@ console.log('Woohoo! We connected to the mySQL server');
 
 exports.addUser = function(username, callback){
   console.log('TRYING TO ADD USER');
-
+  dbConnection.query('INSERT INTO Users (username) VALUES ("' + username + '");', function(err, rows){
+    if( err ) throw err;
+    dbConnection.query('SELECT * from Users;', function(err, rows){
+      callback(err, rows);
+      console.log(rows);
+      // dbConnection.release();
+    });
+  });
 };
 
 exports.addMessage = function(content, timestamp, U_ID, callback){
+  console.log('TRYING TO ADD MESSAGE');
 
 };
